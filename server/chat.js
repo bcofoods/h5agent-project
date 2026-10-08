@@ -66,7 +66,7 @@ export default {
 
             }
 
-            // 前端工具调用相应
+            // 前端工具调用响应
             else if (req.url === "/api/chat/tool-result") {
                 let postData = ""
                 req.on('data', (chunk) => { postData += chunk; });
