@@ -1,4 +1,5 @@
 import { readPlain } from "oipage/nodejs/disk/index.js";
+import {join} from "path";
 
 export default {
     description: {
@@ -19,6 +20,6 @@ export default {
         },
     },
     execute: async function (args) {
-        return readPlain(args.filepath);
+        return readPlain(join(process.cwd(), args.filepath));
     }
 };
